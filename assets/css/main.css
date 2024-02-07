@@ -222,3 +222,86 @@ ul li {
 .header .fixed .nav ul li a:hover {
   color: #ff9800;
 }
+
+/* Home Section */
+.home-section {
+  min-height: 100vh;
+  background-image: url(../img/moviebg.png);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: 1;
+  padding: 0 15px;
+}
+.home-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.7;
+  z-index: -1;
+}
+.home-section .shape-01 {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border: 2px solid #ff9800;
+  right: 5%;
+  top: 20%;
+  animation: ani01 5s linear infinite;
+}
+.home-section .row {
+  min-height: 100vh;
+}
+.home-section .home-content {
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+}
+.home-section .home-content h4 {
+  font-size: 20px;
+  color: #fff;
+  margin: 0;
+}
+.home-section .home-content h2 {
+  font-size: 60px;
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 10px;
+}
+.home-section .scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  height: 30px;
+  width: 30px;
+  margin-left: -15px;
+  animation: scrollDown 2s ease infinite;
+  transition: 0.5s ease;
+}
+@keyframes scrollDown {
+  0%,
+  20%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.home-section .scroll-down i {
+  font-size: 45px;
+  opacity: 0.5;
+  display: block;
+  margin: 2px auto;
+  color: #fff;
+}
