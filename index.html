@@ -8,13 +8,14 @@
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/main.css">
+
     <title>Document</title>
 </head>
 
 <body>
     <!-- preloader -->
-    <div class="preloader">
-        <div class="loader"></div>
+    <div id="preloader">
+        <div id="status"></div>
     </div>
     <!-- preloader Ends -->
 
@@ -32,6 +33,7 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#actors">Actors</a></li>
                         <li><a href="#categories">Categories</a></li>
                         <li><a href="#top">Top-rated</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -47,7 +49,7 @@
         <!-- shape -->
         <div class="shape-01"></div>
         <div class="container">
-            <div class="row align-itemes-center">
+            <div class="row align-items-center">
                 <div class="home-content">
                     <h4>Download your favorite Movie in just a click</h4>
                     <h2>Welcome to Movie Club</h2>
@@ -88,15 +90,15 @@
                     <div class="stats">
                         <div class="row">
                             <div class="stat-box">
-                                <h2>150K+</h2>
+                                <h2 class="counter">15000</h2>
                                 <h5>Daily Downloads</h5>
                             </div>
                             <div class="stat-box">
-                                <h2>2500+</h2>
+                                <h2 class="counter">25000</h2>
                                 <h5>Movies Available</h5>
                             </div>
                             <div class="stat-box">
-                                <h2>1M+</h2>
+                                <h2 class="">1M+</h2>
                                 <h5>Happy Clients</h5>
                             </div>
                         </div>
@@ -176,6 +178,85 @@
         </div>
     </section>
     <!-- Categories SECTION ENDS -->
+
+
+    <!-- Slider SECTION STARTS -->
+    <section class="slider-section" id="actors">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h1>Actors</h1>
+                </div>
+            </div>
+            <div class="slider-images">
+                <div class="slider-img">
+                    <img src="assets/img/slider/1.png" alt="1">
+                    <h1>Morgan Freeman</h1>
+                    <div class="detail">
+                        <h2>Morgan Freeman</h2>
+                        <p>50+ Movies</p>
+                    </div>
+                </div>
+                <div class="slider-img">
+                    <img src="assets/img/slider/2.png" alt="2">
+                    <h1>Samuel L. Jackson
+                    </h1>
+                    <div class="detail">
+                        <h2>Samuel L. Jackson
+                        </h2>
+                        <p>180+ Movies</p>
+                    </div>
+                </div>
+                <div class="slider-img">
+                    <img src="assets/img/slider/3.png" alt="3">
+                    <h1>Sandra Bullock</h1>
+                    <div class="detail">
+                        <h2>Sandra Bullock</h2>
+                        <p>50+ Movies</p>
+                    </div>
+                </div>
+                <div class="slider-img active">
+                    <img src="assets/img/slider/4.png" alt="4">
+                    <h1>Keanu Reeves</h1>
+                    <div class="detail">
+                        <h2>Keanu Reeves</h2>
+                        <p>50+ Movies</p>
+                    </div>
+                </div>
+                <div class="slider-img">
+                    <img src="assets/img/slider/5.png" alt="5">
+                    <h1>Al Pacino</h1>
+                    <div class="detail">
+                        <h2>Al Pacino</h2>
+                        <p>50+ Movies</p>
+                    </div>
+                </div>
+                <div class="slider-img">
+                    <img src="assets/img/slider/6.png" alt="6">
+                    <h1>Jennifer Aniston</h1>
+                    <div class="detail">
+                        <h2>Jennifer Aniston</h2>
+                        <p>50+ Movies</p>
+                    </div>
+                </div>
+                <div class="slider-img">
+                    <img src="assets/img/slider/7.png" alt="1">
+                    <h1>Scarlett Johansson
+                    </h1>
+                    <div class="detail">
+                        <h2>Scarlett Johansson
+                        </h2>
+                        <p>50+ Movies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Slider SECTION Ends -->
+
+
 
 
     <!-- Top rated SECTION STARTS -->
@@ -350,19 +431,19 @@
 
 
     <!-- LIGHT BOX START -->
-    <div class="lightbox">
+    <div class="slidebox">
         <div class="img-box">
-            <div class="lightbox-close">&times;</div>
-            <img src="assets/img/works/large/2.png" alt="img1" class="lightbox-img">
-            <div class="lightbox-caption">
-                <div class="lightbox-category">
+            <div class="slidebox-close">&times;</div>
+            <img src="assets/img/works/large/2.png" alt="img1" class="slidebox-img">
+            <div class="slidebox-caption">
+                <div class="slidebox-category">
 
                 </div>
-                <div class="lightbox-counter">
+                <div class="slidebox-counter">
 
                 </div>
             </div>
-            <div class="lightbox-controls">
+            <div class="slidebox-controls">
                 <div class="prev">
                     <i class="fa fa-chevron-left"></i>
                 </div>
@@ -375,24 +456,15 @@
     <!-- LIGHT BOX ENDS -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- js -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
-
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src=""></script>
+    <!-- <script src="https://unpkg.com/typeit@@{TYPEIT_VERSION}/dist/index.umd.js"></script> -->
+    <script src="waypoints.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+
+
 </body>
 
 </html>
