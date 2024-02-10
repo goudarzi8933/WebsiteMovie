@@ -31,7 +31,7 @@ $(document).ready(function () {
       $(".header").removeClass("fixed");
     }
   });
-
+  
   
   // counterUp 
 
@@ -56,8 +56,17 @@ $(document).ready(function () {
 
   });
 
+
+  // Slider section 
+  
+  $(".slider-img").on("click", function() {
+    $(".slider-img").removeClass("active");
+  $(this).addClass("active");
+});
+
   
   // slidebox
+
   const wHeight = $(window).height();
   $(".slidebox-img").css("max-height", wHeight + "px");
 
