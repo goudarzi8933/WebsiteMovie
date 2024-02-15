@@ -6,21 +6,12 @@ $(document).ready(function () {
 
   // preloader 
 
-  $(window).on('load', function () { // makes sure the whole site is loaded 
-    $('#status').fadeOut(); // will first fade out the loading animation 
-    $('#preloader').fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  $(window).on('load', function () {
+    $('#status').fadeOut();
+    $('#preloader').fadeOut('slow');
     $('body').delay(350).css({ 'overflow': 'visible' });
   })
 
-  //navToggle mobile
-  // $(".nav-toggle").click(function () {
-  //   $(".header .nav").slideToggle();
-  // })
-  // $(".header .nav a").click(function () {
-  //   if ($(window).width() < 768) {
-  //     $(".header .nav").slideToggle();
-  //   }
-  // });
 
   let menu = document.querySelector("#menu-icon");
   let navbar = document.querySelector(".navbar");
@@ -30,23 +21,15 @@ $(document).ready(function () {
     navbar.classList.toggle("active");
   }
 
-  
+
 
   // fixed header
   $(window).scroll(function () {
     menu.classList.remove("bx-x");
     navbar.classList.remove("active");
-
-
-    // if ((this).scrollTop() > 100) {
-    //   $("header").addClass("fixed");
-    // }
-    // else {
-    //   $("header").removeClass("fixed");
-    // }
   });
-  
-  
+
+
   // counterUp 
 
   $(function () {
@@ -73,63 +56,63 @@ $(document).ready(function () {
 
   // Slider section 
 
-  $(".slider-img").on("click", function() {
+  $(".slider-img").on("click", function () {
     $(".slider-img").removeClass("active");
-  $(this).addClass("active");
-});
+    $(this).addClass("active");
+  });
 
-  
-  // slidebox
+
+  // lightbox
 
   const wHeight = $(window).height();
-  $(".slidebox-img").css("max-height", wHeight + "px");
+  $(".lightbox-img").css("max-height", wHeight + "px");
 
   $(".work-item-inner").click(function () {
     index = $(this).parent(".work-item").index();
-    $(".slidebox").addClass("open");
-    slideboxSlideShow();
+    $(".lightbox").addClass("open");
+    lightboxSlideShow();
   });
 
-  $(".slidebox .prev").click(function () {
+  $(".lightbox .prev").click(function () {
     if (index == 0) {
       index = totalWorkItems - 1;
     } else {
       index--;
     }
-    slideboxSlideShow();
+    lightboxSlideShow();
   })
-  $(".slidebox .next").click(function () {
+  $(".lightbox .next").click(function () {
     if (index == totalWorkItems - 1) {
       index = 0;
     } else {
       index++;
     }
-    slideboxSlideShow();
-  });
-  
-  $(".slidebox-close").click(function () {
-    $(".slidebox").removeClass("open");
+    lightboxSlideShow();
   });
 
-  $(".slidebox").click(function (event) {
-    if ($(event.target).hasClass("slidebox")) {
+  $(".lightbox-close").click(function () {
+    $(".lightbox").removeClass("open");
+  });
+
+  $(".lightbox").click(function (event) {
+    if ($(event.target).hasClass("lightbox")) {
       $(this).removeClass("open");
     }
   });
-  
-  function slideboxSlideShow() {
+
+  function lightboxSlideShow() {
     const imgSrc = $(".work-item").eq(index).find("img").attr("data-large");
     const category = $(".work-item").eq(index).find("h4").html();
 
-    $(".slidebox-img").attr("src", imgSrc);
-    $(".slidebox-category").html(category);
-    $(".slidebox-counter").html(totalWorkItems+"/"+(index+1));
+    $(".lightbox-img").attr("src", imgSrc);
+    $(".lightbox-category").html(category);
+    $(".lightbox-counter").html((index + 1) + "/" + totalWorkItems);
   };
 
   // dialog
 
-  $( function() {
-    $( "#dialog" ).dialog({
+  $(function () {
+    $("#dialog").dialog({
       autoOpen: false,
       show: {
         effect: "blind",
@@ -140,33 +123,33 @@ $(document).ready(function () {
         duration: 1000
       }
     });
- 
-    $( "#button" ).on( "click", function() {
-      $( "#dialog" ).dialog( "open" );
+
+    $("#button").on("click", function () {
+      $("#dialog").dialog("open");
     });
-  } );
+  });
 
 
   // social buttons
 
-   $( ".button-group > div" ).click(function() {
-  $('.button-group > div.active').not(this).removeClass('active');
-  $(this).toggleClass("active");
-});
- $(".telegram").hover(function () {
+  $(".button-group > div").click(function () {
+    $('.button-group > div.active').not(this).removeClass('active');
+    $(this).toggleClass("active");
+  });
+  $(".telegram").hover(function () {
     $(this).toggleClass("color-telegram");
-});
-$(".linkedin").hover(function () {
-  $(this).toggleClass("color-linkedin");
-});
+  });
+  $(".linkedin").hover(function () {
+    $(this).toggleClass("color-linkedin");
+  });
 
-$(".whatsapp").hover(function () {
-  $(this).toggleClass("color-whatsapp")
-});
+  $(".whatsapp").hover(function () {
+    $(this).toggleClass("color-whatsapp")
+  });
 
-$(".instagram").hover(function () {
-  $(this).toggleClass("color-instagram")
-});
-  
-  // end documen ready
+  $(".instagram").hover(function () {
+    $(this).toggleClass("color-instagram")
+  });
+
+
 });
