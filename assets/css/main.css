@@ -635,7 +635,7 @@ header {
 }
 
 /* ============ light box  ============*/
-.slidebox {
+.lightbox {
   position: fixed;
   left: 0;
   top: 0;
@@ -650,21 +650,21 @@ header {
   display: none;
 }
 
-.slidebox.open {
+.lightbox.open {
   display: flex;
 }
-.slidebox .slidebox-img {
+.lightbox .lightbox-img {
   display: flex;
   width: auto;
   height: auto;
   max-width: 100%;
   padding: 40px 0;
 }
-.slidebox .img-box {
+.lightbox .img-box {
   position: relative;
   cursor: auto;
 }
-.slidebox .slidebox-close {
+.lightbox .lightbox-close {
   height: 30px;
   width: 30px;
   display: block;
@@ -677,7 +677,7 @@ header {
   line-height: 26px;
   cursor: zoom-out;
 }
-.slidebox .slidebox-caption {
+.lightbox .lightbox-caption {
   color: #fff;
   font-size: 16px;
   font-weight: 600;
@@ -688,11 +688,11 @@ header {
   justify-content: space-between;
   width: 100%;
 }
-.slidebox .slidebox-caption .slidebox-category {
+.lightbox .lightbox-caption .lightbox-category {
   padding-right: 50px;
 }
-.slidebox .slidebox-controls .prev,
-.slidebox .slidebox-controls .next {
+.lightbox .lightbox-controls .prev,
+.lightbox .lightbox-controls .next {
   position: absolute;
   height: calc(100% - 80px);
   top: 40px;
@@ -700,19 +700,19 @@ header {
   display: flex;
   align-items: center;
 }
-.slidebox .slidebox-controls .prev {
+.lightbox .lightbox-controls .prev {
   left: 0;
   width: 50%;
   justify-content: flex-start;
 }
-.slidebox .slidebox-controls .next {
+.lightbox .lightbox-controls .next {
   right: 0;
   width: 50%;
   justify-content: flex-end;
   padding-right: 5px;
 }
-.slidebox .slidebox-controls .prev i,
-.slidebox .slidebox-controls .next i {
+.lightbox .lightbox-controls .prev i,
+.lightbox .lightbox-controls .next i {
   color: #fff;
   font-size: 30px;
   padding: 5px;
@@ -720,10 +720,14 @@ header {
   display: inline-block;
   transition: all 0.5s;
 }
-.slidebox .slidebox-controls .prev:hover i,
-.slidebox .slidebox-controls .next:hover i {
+.lightbox .lightbox-controls .prev:hover i,
+.lightbox .lightbox-controls .next:hover i {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
+}
+.lightbox-category,
+.lightbox-counter {
+  font-size: 1.1rem;
 }
 
 /* ============ contact Section  ============*/
